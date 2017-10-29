@@ -15,7 +15,7 @@ Predict absent ratings for testing dataset.<br />
 Accuracy obtained: RMSE = 0.9742
 
 ## Questions:
-* How have you handled the missing users, outlier rating when predicted value exceeds [0,5] range?
+* How have you handled the missing users, outlier rating when predicted value exceeds [0,5] range?<br />
 The normal algorithms do not take into account the missing users/movies in the testing data set. For that I did the “Simple Mean Imputation”.<br />
     1) That means that for the movies which are not present in the training data, I just took the mean of all the ratings given by the respective user as the rating of the item.<br />
     2) If the user is not present then it gives the average rating of the movie to it.<br />
@@ -24,15 +24,15 @@ The normal algorithms do not take into account the missing users/movies in the t
 To handle the outlier ratings, if the rating goes above 5 or below 0, then I am taking the average of the movie and assigning it as the
 rating.<br />
 
-* How to run your program for both tasks?
-**Task 1:**
+* How to run your program for both tasks?<br />
+**Task 1:**<br />
 1) spark-submit --class "Himanshu_Purandare_Task1" --master local[*] Himanshu_Purandare_task1.jar "<Path_to_Ratings.csv>"
-"*<path_to_testing_small.csv>*"
-**Task 2:**
+"*<path_to_testing_small.csv>*"<br />
+**Task 2:**<br />
 1) spark-submit --class "Himanshu_Purandare_Task2" --master local[*] Himanshu_Purandare_task2.jar "*<Path_to_Ratings.csv>*"
-"*<Path_to_Testing_small.csv>*"
+"*<Path_to_Testing_small.csv>*"<br />
 
-* Any improvement in your recommendation system?
+* Any improvement in your recommendation system?<br />
 I have taken neighbourhood as 20 to get better results.<br />
 Also, I have used Case Amplification for getting better results. By doing Case amplification, we can reduce noise and thus get better results.<br />
 Case Amplification favours high weights while penalises smaller weights. Thus, this changes the neighbourhood of the predictions.
