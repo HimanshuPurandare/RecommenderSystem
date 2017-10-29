@@ -7,7 +7,7 @@ Predict absent ratings for testing dataset.<br />
 A Model-based CF recommendation system by using Spark MLlib.<br />
 Model Used: ALS algorithm<br />
 Accuracy obtained: RMSE = 1.0006<br />
-More Information: (https://spark.apache.org/docs/2.2.0/mllib-collaborative-filtering.html "Collaborative Filtering - RDD-based API")
+More Information: [Collaborative Filtering - RDD-based API](https://spark.apache.org/docs/2.2.0/mllib-collaborative-filtering.html)
 
 ## Task 2:
 ## Item-based collaborative filtering using Pearson correlation:
